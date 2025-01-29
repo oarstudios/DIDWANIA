@@ -1,0 +1,31 @@
+.slider-container {
+    width: 100%;
+    /* padding: 1rem; */
+  }
+  
+  .testimonials_container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .certificate-image {
+    width: 100%;
+    height: auto; 
+    overflow: hidden;
+ 
+  }
+  
+  .certificate-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .swiper-pagination-clickable .swiper-pagination-bullet {
+    background-color: #98168b;
+  }
+  
+
+
+  

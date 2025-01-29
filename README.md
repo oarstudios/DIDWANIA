@@ -1,0 +1,1 @@
+FRONTEND AND BACKEND: npm start

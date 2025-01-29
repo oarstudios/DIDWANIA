@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Quicksand:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Base styles */
+.order {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #FFFBF5;
+}
+
+.orderLeft {
+  width: 30%;
+  min-height: 89.9vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
+  border: none;
+  border-right: 1px solid #B4B4B4;
+  position: relative;
+}
+
+.olHeading,
+.olContent {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.order .olLogout{
+  display: flex;
+  right: 10px;
+  width: max-content;
+  padding: 0 10px;
+}
+
+.navIcons1 .olLogout{
+  /* width: 25%; */
+}
+
+.olHeading {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.olHeading h1 {
+  font-family: "Montserrat";
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 43px;
+  color: #454545;
+}
+
+.olHeading h2 {
+  font-family: Quicksand;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 38px;
+  color: #989797;
+}
+
+.olContent {
+  gap: 15px;
+}
+
+.olContent h3 {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #454545;
+  cursor: pointer;
+}
+
+.olContent h3 a {
+  text-decoration: none;
+  color: #454545;
+}
+
+.olContent .olContentH3 a {
+  color: #98168B;
+  width: max-content;
+  position: relative;
+}
+
+.olContentH3 a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #98168B;
+  bottom: -2px;
+  left: 0;
+  animation: underlined 0.2s ease-in-out;
+}
+
+@keyframes underlined {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.olLogout h3 {
+  font-family: Montserrat;
+  /* font-size: 20px; */
+  font-weight: 600;
+  line-height: 24px;
+  color: #454545;
+  cursor: pointer;
+}
+
+.orderRgt {
+  width: 70%;
+  min-height: 89.9vh;
+}
+
+.orderHistory {
+  margin: 30px auto;
+  border-collapse: separate;
+}
+
+.form1{
+  padding: 1rem;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #454545;
+  padding: 10px;
+  margin: 0;
+}
+
+
+.savechange{
+  width: 50%;
+    padding: 15px;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #98168b;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.savechange:hover{
+  color:black;
+  border: 1px solid #98168b;
+  background-color: white;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .order {
+    flex-direction: column;
+  }
+
+  .orderLeft {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #B4B4B4;
+    min-height: auto;
+    padding-bottom: 20px;
+    position: relative;
+  }
+
+  .orderRgt {
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    padding: 5px;
+    width: 20px;
+  }
+
+  .olHeading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+ 
+  .olContent {
+    display: none;
+  }
+
+  .orderLeft.open .olContent,
+  .orderLeft.open .olLogout {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .olHeading h1 {
+    font-size: 25px;
+  }
+
+
+
+  .olContent h3 {
+    font-size: 16px;
+  }
+
+  .ohisHeading th,
+  .ohisHead1 td {
+    font-size: 10px;
+    padding: 8px 4px;
+  }
+
+  .saveChanges button {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+
+  .orderHisExplore p {
+    font-size: 10px;
+  }
+
+  .orderHisExplore img {
+    width: 14px;
+  }
+}
+
+/* Table responsive styles */
+@media (max-width: 768px) {
+  .orderHistory table,
+  .orderHistory thead,
+  .orderHistory tbody,
+  .orderHistory th,
+  .orderHistory td,
+  .orderHistory tr {
+    display: block;
+    margin: 10px;
+  }
+
+  .orderHistory thead tr {
+    display: none;
+  }
+
+  .orderHistory tr {
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .orderHistory td {
+    border: none;
+    padding: 10px;
+    text-align: justify;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .orderHistory td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: calc(50% - 20px);
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 480px) {
+  .orderHistory td {
+    padding: 8px 4px;
+  }
+
+  .orderHistory td::before {
+    left: 5px;
+    padding-right: 5px;
+  }
+}

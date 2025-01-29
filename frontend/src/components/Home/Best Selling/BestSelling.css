@@ -1,0 +1,149 @@
+.sub-title {
+  margin: 3rem 5%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sub-title h2 {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: black;
+}
+
+.view-all-best-selling {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #044588;
+  cursor: pointer;
+}
+
+.product-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+  gap: 1rem; /* spacing between items */
+}
+
+.product-item {
+  background-color: #f9f9f9;
+  /* border-radius: 10px; */
+  overflow: hidden;
+
+}
+
+
+
+.product-item img {
+  width: 100%;
+  height: 350px; /* Ensure uniform height */
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover img {
+  transform: scale(1.05);
+}
+
+.product-details {
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.model-type {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  text-align: left;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #98168b;
+}
+
+.price-container .fa-cart-plus {
+  font-size: 1.5rem;
+  color: #98168b;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.price-container .fa-cart-plus:hover {
+  color: black;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .product-section {
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  }
+
+  .sub-title {
+    margin: 2rem 4%;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  .price-container .fa-cart-plus {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-section {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  }
+
+  .sub-title {
+    margin: 1.5rem 3%;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .price-container .fa-cart-plus {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-section {
+    grid-template-columns: 1fr 1fr; /* 1 item per row */
+  }
+
+  .sub-title {
+    margin: 1rem 2%;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .price-container .fa-cart-plus {
+    font-size: 1rem;
+  }
+  .product-item img{
+    height: 200px;
+  }
+}

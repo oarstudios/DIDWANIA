@@ -1,0 +1,240 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #9a318a;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 280px;
+  background-color: white;
+  border: 2px solid #98168b;
+  color: #98168b;
+  padding: 20px;
+}
+
+.footer-left img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-left .email,
+.footer-left .phone,
+.footer-left .address {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.38px;
+  text-align: left;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #98168b;
+}
+
+.footer-left .email a,
+.footer-left .phone a,
+.footer-left .address a {
+  text-decoration: none;
+  color: #98168b;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.footer-left .address a,
+p.india {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 24.38px;
+  text-align: left;
+  text-decoration: none;
+  color: #98168b;
+}
+
+.footer-left .social-icons a {
+  display: flex;
+  gap: 10px;
+  margin: 30px 0;
+  width: 45px;
+  height: 35px;
+  padding: 5.83px 2.92px;
+  cursor: pointer;
+  color: #98168b;
+}
+
+.footer-left .social-icons span {
+  display: flex;
+  gap: 10px;
+  font-size: 34px;
+  color: #98168b;
+}
+
+.footer-left .copyright {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.38px;
+  text-align: left;
+}
+
+.footer-right {
+  flex: 1;
+  min-width: 280px;
+  color: white;
+  margin-right: 2rem;
+}
+
+.footer-right ul {
+  margin-top: 5rem;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.footer-right ul li {
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24.38px;
+  text-align: right;
+}
+
+.footer-right ul li a {
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24.38px;
+  text-align: right;
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+.footer-right ul li:hover {
+  text-decoration: underline;
+}
+
+.footer-right p {
+  font-family: Montserrat;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 24.38px;
+  text-align: right;
+  margin-top: 4rem;
+}
+
+.footer-right p .oar a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #edebeb;
+  font-family: Notable;
+  font-size: 30px;
+}
+
+
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer-right ul li,
+  .footer-right p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-left .email,
+  .footer-left .phone,
+  .footer-left .address,
+  .footer-left .copyright {
+    font-size: 14px;
+  }
+
+  .footer-right ul li,
+  .footer-right ul li a {
+    font-size: 20px;
+  }
+
+  .footer-right p {
+    font-size: 20px;
+  }
+
+  .footer-right p .oar a {
+    font-size: 24px;
+  }
+}
+.footer-right p {
+  font-family: Montserrat;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 24.38px;
+  text-align: center;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+
+  flex-wrap: wrap; /* Ensures text and logo don't overflow */
+}
+
+.footer-right p .oar a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #edebeb;
+  font-family: Notable;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.oar-logo {
+  width: 200px; /* Default size */
+  height: auto;
+  margin-left: 10px; /* Space between text and logo */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-right p {
+    flex-direction: column; /* Stack text and logo */
+    gap: 5px;
+  }
+
+  .oar-logo {
+    width: 180px; /* Reduce logo size */
+    margin-left: 0; /* Center align */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-right p {
+    font-size: 20px;
+  }
+
+  .footer-right p .oar a {
+    font-size: 24px;
+  }
+
+  .oar-logo {
+    width: 150px; /* Smaller logo for mobile */
+  }
+}
+

@@ -1,0 +1,157 @@
+.religious-accessories-container {
+    position: relative;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 3rem;
+  }
+  
+  .religious-accessories-image {
+    width: 100%;
+    /* border-radius: 10px; */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(268.68deg, rgba(180, 132, 120, 0.7) 8.82%, #000000 86.66%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-align: left;
+    /* border-radius: 10px; */
+    padding: 20px;
+    box-sizing: border-box;
+
+  }
+  
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 40%;
+    text-align: justify;
+    margin-left: 2rem;
+  }
+  
+  .text-content h1 {
+    font-family: MonteCarlo;
+    font-size: 82px;
+    font-weight: 400;
+    line-height: 108.8px;
+    text-align: left;
+    color: goldenrod;
+  }
+  
+  .text-content p {
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 24.38px;
+    text-align: left;
+  }
+  
+  .shop-now-button {
+    background-color: black;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 400;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    /* margin-right: 2rem; */
+    border-radius: 10px;
+    cursor: pointer;
+    /* transition: background-color 0.3s ease; */
+  }
+  
+  .shop-now-button:hover {
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+    font-weight: 400;
+  }
+  
+  /* Responsive styles for .overlay */
+  @media (max-width: 768px) {
+    .overlay {
+
+      justify-self: center;
+      align-self: center;
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .text-content {
+      max-width: 80%;
+      margin-left: 0;
+    }
+  
+    .text-content h1 {
+      font-size: 50px;
+      line-height: 1.2;
+    }
+  
+    .text-content p {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  
+    .shop-now-button {
+      font-size: 24px;
+      padding: 10px 15px;
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .overlay{
+        flex-direction: column;
+    }
+   
+    .text-content h1 {
+      font-size: 36px;
+    }
+  
+    .text-content p {
+      font-size: 12px;
+      text-align: center;
+    }
+  
+    .shop-now-button {
+      font-size: 10px;
+      padding: 6px 10px;
+    }
+  }
+
+  
+  .religious-accessories-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .desktop-only {
+    display: block;
+  }
+  
+  .mobile-only {
+    display: none;
+  }
+  
+  /* Media query to switch between desktop and mobile images */
+  @media (max-width: 768px) {
+    .desktop-only {
+      display: none;
+    }
+    .mobile-only {
+      display: block;
+    }
+  }
+  

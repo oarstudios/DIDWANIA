@@ -1,0 +1,161 @@
+.daily-accessories-container {
+    position: relative;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 3rem;
+  }
+  
+  .daily-accessories-image {
+    width: 100%;
+    /* border-radius: 10px; */
+  }
+  
+  .overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(268.68deg, rgba(0, 0, 0, 0.7) 8.82%, #FFF4D3 86.66%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#242424;
+
+    /* border-radius: 10px; */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .text-content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 40%;
+    margin-left: 2rem;
+  }
+  
+  .text-content2 h1 {
+    font-family: Notable;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 83.2px;
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+  
+  .text-content2 p {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.38px;
+    text-align: left;
+  }
+  
+  .shop-now-button2 {
+    background-color: black;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 400;
+  
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    /* margin-right: 2rem; */
+    border-radius: 10px;
+    cursor: pointer;
+    /* transition: background-color 0.3s ease; */
+  }
+  
+  .shop-now-button2:hover {
+    background-color: transparent;
+    border: 2px solid black;
+  
+    color: black;
+  
+    font-weight: 400;
+  }
+
+
+
+
+   /* Responsive styles for .overlay */
+   @media (max-width: 768px) {
+    .overlay {
+
+      justify-self: center;
+      align-self: center;
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .text-content2 {
+      max-width: 80%;
+      margin-left: 0;
+    }
+  
+    .text-content2 h1 {
+      font-size: 50px;
+      line-height: 1.2;
+    }
+  
+    .text-content2 p {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  
+    .shop-now-button2 {
+      font-size: 24px;
+      padding: 10px 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .overlay{
+        flex-direction: column;
+    }
+    .text-content2 h1 {
+      font-size: 24px;
+    }
+  
+    .text-content2 p {
+      font-size: 12px;
+      text-align: center;
+    }
+  
+    .shop-now-button2 {
+      font-size: 10px;
+      padding: 2px 10px;
+      margin-top: 0rem;
+    }
+  }
+  
+
+  .daily-accessories-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .desktop-only {
+    display: block;
+  }
+  
+  .mobile-only {
+    display: none;
+  }
+  
+  /* Media query to display the appropriate image */
+  @media (max-width: 768px) {
+    .desktop-only {
+      display: none;
+    }
+    .mobile-only {
+      display: block;
+    }
+  }
+  

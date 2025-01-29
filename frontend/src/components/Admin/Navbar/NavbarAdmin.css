@@ -1,0 +1,153 @@
+.navMain1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color: rgb(242, 235, 235);
+    z-index: 5;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    border: none;
+    width: 100%;
+  }
+  
+  .logo1 {
+    padding: 10px;
+    width: 100px; /* Set the desired width */
+    height: auto; /* Maintains the aspect ratio */
+  }
+  
+  .navComps1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+  }
+  
+  .navLinks1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .navIcons1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .navMain1 a {
+    text-decoration: none;
+    color: #4a4747;
+    font-size: 0.8rem;
+  }
+  
+  .navLinks1 a {
+    font-size: 0.8rem;
+  }
+  
+  .navIcons1 .smallSearchBar1 {
+    border: 2px solid #98168b;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    border-radius: 15px;
+    padding: 0px 10px;
+    position: relative;
+  }
+
+  .smallSearchBar1 .searchedEle{
+    position: absolute;
+  width: 100%;
+  top: 40px;
+  /* border: 1px solid black; */
+  background-color: #98168b;
+  padding: 0px;
+  list-style: none;
+  border-radius: 10px;
+  /* backdrop-filter: blur(30px); */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 80%;
+  z-index: 10;
+  }
+  
+  .navIcons1 .smallSearchBar1 input {
+    padding: 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(242, 235, 235);
+  }
+  
+  .navIcons1 .smallSearchBar1 img {
+    width: 20px;
+    margin-left: 5px;
+  }
+  
+  .olLogout{
+    border: 1px solid #98168b;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  /* Responsive CSS */
+  /* Responsive CSS */
+@media (max-width: 480px) {
+
+  .logo1 {
+    width: 65px;
+  }
+
+  .navComps1 {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 8px;
+    margin-right: 10px;
+  }
+
+  .navMain1 {
+    height: 120px;
+    padding: 0rem;
+    align-items: self-start;
+    padding-top: 15px;
+  }
+
+  .navLinks1 {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .navIcons1 {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+  }
+
+
+
+  .olLogout {
+    margin-top: 10px;
+    width: 23%;
+    text-align: center;
+    font-size: 0.7rem;
+    padding: 4px;
+    border: 1px solid #98168b;
+    border-radius: 5px;
+    background-color: #f2ebeb;
+    cursor: pointer;
+    color: #4a4747;
+    position: absolute;
+    /* right: 10px; */
+    bottom: 10px;
+  }
+
+  .olLogout h3{
+    font-size: 0.7rem;
+  }
+}
