@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a7801500.css",
+    "main.js": "/static/js/main.0fddf579.js",
+    "static/media/religious-desktop.png": "/static/media/religious-desktop.7f20bd83a0fab99cb1e6.png",
+    "static/media/slider1.png": "/static/media/slider1.386c760db3b56806a69f.png",
+    "static/media/daily-desktop.png": "/static/media/daily-desktop.7985e1a5ad0cbe2f81bc.png",
+    "static/media/religious-mobile.png": "/static/media/religious-mobile.cb6e6ba52d25372c11cf.png",
+    "static/media/4.jpeg": "/static/media/4.73983862cefc349fd70d.jpeg",
+    "static/media/daily.png": "/static/media/daily.8146cbb388b412374b66.png",
+    "static/media/religious.png": "/static/media/religious.4191f28a5d9e3fe7cd80.png",
+    "static/media/2.jpeg": "/static/media/2.58314026c26ba06553ec.jpeg",
+    "static/media/daily-mobile.png": "/static/media/daily-mobile.5d1461b92bb59a100dfe.png",
+    "static/media/12.jpeg": "/static/media/12.a6694c32bd6be71c25eb.jpeg",
+    "static/media/11.jpeg": "/static/media/11.1f6b3174d7fe4c278103.jpeg",
+    "static/media/3.jpeg": "/static/media/3.28fde0000d525aa9d0a4.jpeg",
+    "static/media/1.jpeg": "/static/media/1.47f175d954a52cda4e25.jpeg",
+    "static/media/axios.cjs": "/static/media/axios.f50781e842ef05922fb7.cjs",
+    "static/media/OAR (7).png": "/static/media/OAR (7).05e474c48fb990e1bd61.png",
+    "static/media/logo.png": "/static/media/logo.8331f6afebb5cb5831c2.png",
+    "static/media/avtar.jpg": "/static/media/avtar.8c8a0b29b25dd871b2ba.jpg",
+    "index.html": "/index.html",
+    "main.a7801500.css.map": "/static/css/main.a7801500.css.map",
+    "main.0fddf579.js.map": "/static/js/main.0fddf579.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7801500.css",
+    "static/js/main.0fddf579.js"
+  ]
+}
