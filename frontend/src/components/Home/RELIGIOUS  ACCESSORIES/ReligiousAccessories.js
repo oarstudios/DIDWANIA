@@ -15,7 +15,7 @@ function ReligiousAccessories() {
   const [products, setProducts] = useState([]);
 
   const fetchData = async () => {
-    const response = await fetch('http://147.93.103.125:5000/products/getallproducts');
+    const response = await fetch('https://didwaniacreations.in/products/getallproducts');
     const json = await response.json();
     if (response.ok) {
       const filteredProducts = json.products.filter((prd) => prd.category === "Religious Accessories");
@@ -34,7 +34,7 @@ function ReligiousAccessories() {
       }
 
       const formData = { 'productId': product._id, 'quantity': 1 };
-      const response = await fetch(`http://147.93.103.125:5000/users/addtocart/${user.user?._id}`, {
+      const response = await fetch(`https://didwaniacreations.in/users/addtocart/${user.user?._id}`, {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
@@ -75,7 +75,7 @@ function ReligiousAccessories() {
             <div className="product-item" key={product._id}>
               <Link to={`/product/${product._id}`}>
                 <img
-                  src={`http://147.93.103.125:5000/uploads/${product.productImages[0]}`}
+                  src={`https://didwaniacreations.in/uploads/${product.productImages[0]}`}
                   alt={product.title}
                   className="hoverable"
                 />

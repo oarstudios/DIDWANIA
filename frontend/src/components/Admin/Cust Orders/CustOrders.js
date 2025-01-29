@@ -36,7 +36,7 @@ function CustOrders() {
       }
 
       try {
-        const response = await fetch('http://147.93.103.125:5000/bills/getbills', {
+        const response = await fetch('https://didwaniacreations.in/bills/getbills', {
           headers: {
             'Authorization': `Bearer ${user.token}`,
           },
