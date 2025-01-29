@@ -18,7 +18,7 @@ module.exports = function override(config, env) {
       }),
     ],
     devServer: {
-      allowedHosts: "all", // ✅ Fix for "allowedHosts" error
+      allowedHosts: ["localhost"], // ✅ Fix: Ensures it's a valid non-empty string
     },
   });
 };
