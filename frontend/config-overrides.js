@@ -17,6 +17,9 @@ module.exports = function override(config, env) {
         process: "process/browser",
       }),
     ],
+    devServer: {
+      // Add this line to specify allowed hosts
+      allowedHosts: ['localhost', '147.93.103.125', '0.0.0.0'],
+    },
   });
 };
-
