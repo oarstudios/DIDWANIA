@@ -17,8 +17,6 @@ module.exports = function override(config, env) {
         process: "process/browser",
       }),
     ],
-    devServer: {
-      allowedHosts: ["localhost"], // ✅ Fix: Ensures it's a valid non-empty string
-    },
   });
 };
+
