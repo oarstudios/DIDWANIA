@@ -38,7 +38,7 @@ function Navbar() {
 
     useEffect(() => {
         const fetchProducts = async () => {
-            const response = await fetch("http://localhost:5000/products/getallproducts");
+            const response = await fetch("http://147.93.103.125:5000/products/getallproducts");
             const json = await response.json();
 
             if (response.ok) {
