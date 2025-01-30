@@ -16,7 +16,7 @@ function AcDetails() {
   const {id} = useParams();
   useEffect(()=>{
     const fetchData = async()=>{
-      const response = await fetch(`http://147.93.103.125:5000/users/getuserbyid/${id}`)
+      const response = await fetch(`https://147.93.103.125:5000/users/getuserbyid/${id}`)
       const json = await response.json()
       if(response.ok)
       {
@@ -65,7 +65,7 @@ const newUserData = {
         username: name,
         email
       }
-      const response = await fetch(`http://147.93.103.125:5000/users/updateuser/${id}`, {
+      const response = await fetch(`https://147.93.103.125:5000/users/updateuser/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

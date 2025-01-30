@@ -14,7 +14,7 @@ function DailyAccessories() {
   const [products, setProducts] = useState([]);
 
   const fetchData = async () => {
-    const response = await fetch('http://147.93.103.125:5000/products/getallproducts');
+    const response = await fetch('https://147.93.103.125:5000/products/getallproducts');
     const json = await response.json();
     if (response.ok) {
       const filteredProducts = json.products.filter((prd) => prd.category === "Daily Accessories");
@@ -28,7 +28,7 @@ function DailyAccessories() {
 
   const updateUserCart = async () => {
     try {
-      const response = await fetch(`http://147.93.103.125:5000/users/getuserbyid/${user.user?._id}`, {
+      const response = await fetch(`https://147.93.103.125:5000/users/getuserbyid/${user.user?._id}`, {
         method: "GET",
         headers: {
           'Authorization': `Bearer ${user.token}`
@@ -52,7 +52,7 @@ function DailyAccessories() {
       }
 
       const formData = { 'productId': product._id, 'quantity': 1 };
-      const response = await fetch(`http://147.93.103.125:5000/users/addtocart/${user.user?._id}`, {
+      const response = await fetch(`https://147.93.103.125:5000/users/addtocart/${user.user?._id}`, {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
@@ -98,7 +98,7 @@ function DailyAccessories() {
             <div className="product-item" key={product._id}>
               <Link to={`/product/${product._id}`}>
                 <img
-                  src={`http://147.93.103.125:5000/uploads/${product.productImages[0]}`}
+                  src={`https://147.93.103.125:5000/uploads/${product.productImages[0]}`}
                   alt={product.title}
                   className="hoverable"
                 />

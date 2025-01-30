@@ -14,7 +14,7 @@ function AllAdminProducts() {
   const [products, setProducts] = useState([]);
 
   const fetchData = async () => {
-    const response = await fetch('http://147.93.103.125:5000/products/getallproducts');
+    const response = await fetch('https://147.93.103.125:5000/products/getallproducts');
     const json = await response.json();
     if (response.ok) {
       setProducts(json.products);
@@ -50,7 +50,7 @@ function AllAdminProducts() {
 
   const handleDeleteProduct = async(productId)=>{
 
-    const response = await fetch(`http://147.93.103.125:5000/products/deleteproduct/${productId}`,{
+    const response = await fetch(`https://147.93.103.125:5000/products/deleteproduct/${productId}`,{
       method: "DELETE"
     })
     const json = await response.json()
@@ -79,8 +79,8 @@ function AllAdminProducts() {
             <Link to={`/product/${product._id}`} className="product-item" key={product._id}>
               {product.productImages && product.productImages.length > 0 ? (
                 <img
-                  src={`http://147.93.103.125:5000/uploads/${product.productImages[0]}`}
-                  alt={`http://147.93.103.125:5000/uploads/${product.productImages[0]}`}
+                  src={`https://147.93.103.125:5000/uploads/${product.productImages[0]}`}
+                  alt={`https://147.93.103.125:5000/uploads/${product.productImages[0]}`}
                   className="hoverable"
                 />
               ) : (
