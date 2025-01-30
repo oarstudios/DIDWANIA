@@ -1,25 +1,21 @@
-const { merge } = require("webpack-merge");
-const webpack = require("webpack");
+  const { merge } = require('webpack-merge');
+  const webpack = require('webpack');
 
-module.exports = function override(config, env) {
-  return merge(config, {
-    resolve: {
-      fallback: {
-        crypto: require.resolve("crypto-browserify"),
-        stream: require.resolve("stream-browserify"),
-        buffer: require.resolve("buffer"),
-        process: require.resolve("process/browser"),
+  module.exports = function override(config, env) {
+    return merge(config, {
+      resolve: {
+        fallback: {
+          crypto: require.resolve('crypto-browserify'),
+          stream: require.resolve('stream-browserify'),
+          buffer: require.resolve('buffer'),
+          process: require.resolve('process/browser'),
+        },
       },
-    },
-    plugins: [
-      new webpack.ProvidePlugin({
-        Buffer: ["buffer", "Buffer"],
-        process: "process/browser",
-      }),
-    ],
-    devServer: {
-      // Add this line to specify allowed hosts
-      allowedHosts: ['localhost', '147.93.103.125', '0.0.0.0'],
-    },
-  });
-};
+      plugins: [
+        new webpack.ProvidePlugin({
+          Buffer: ['buffer', 'Buffer'],
+          process: 'process/browser',
+        }),
+      ],
+    });
+  };

@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+
 const cors = require('cors');
 require('dotenv').config();
 const bodyParser = require('body-parser');
@@ -11,10 +12,7 @@ const crypto = require('crypto')
 
 
 
-
 const app = express();
-
-
 
 // app.use(cors({
 //   origin: ["https://www.didwaniacreations.in"],
@@ -23,6 +21,7 @@ const app = express();
 // }));
 
 const PORT = process.env.PORT || 5000;
+
 
 
 // Middleware
@@ -82,6 +81,7 @@ app.post('/order/validate', async (req, res) =>{
 
 
 
+
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('MongoDB connected'))
@@ -93,9 +93,6 @@ app.get('/', (req, res) => {
 });
 
 
-
-
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server is running on http://0.0.0.0:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
-

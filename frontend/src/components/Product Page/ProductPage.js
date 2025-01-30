@@ -26,7 +26,7 @@ function ProductPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`https://didwaniacreations.in:5000/products/getproductbyid/${id}`);
+      const response = await fetch(`http://localhost:5000/products/getproductbyid/${id}`);
       const json = await response.json();
       if (response.ok) {
         console.log(json);
@@ -64,7 +64,7 @@ function ProductPage() {
 
   const updateUserCart = async () => {
     try {
-      const response = await fetch(`https://didwaniacreations.in:5000/users/getuserbyid/${user.user?._id}`, {
+      const response = await fetch(`http://localhost:5000/users/getuserbyid/${user.user?._id}`, {
         method: "GET",
         headers: {
           'Authorization': `Bearer ${user.token}`
@@ -97,7 +97,7 @@ function ProductPage() {
       }
       console.log(formData)
       
-      const response = await fetch(`https://didwaniacreations.in:5000/users/addtocart/${user?.user?._id}`, {
+      const response = await fetch(`http://localhost:5000/users/addtocart/${user?.user?._id}`, {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
@@ -157,14 +157,14 @@ function ProductPage() {
             {product?.productImages?.map((img, index) => (
               <img
                 key={index}
-                src={`https://didwaniacreations.in:5000/uploads/${product.productImages[index]}`}
+                src={`http://localhost:5000/uploads/${product.productImages[index]}`}
                 alt={`pd${index + 1}`}
                 onClick={() => handleImageClick(index)}
               />
             ))}
           </div>
           <div className="prdiMax">
-            {selectedImage && <img src={`https://didwaniacreations.in:5000/uploads/${product.productImages[imgIndex]}`} alt="Selected Product" />}
+            {selectedImage && <img src={`http://localhost:5000/uploads/${product.productImages[imgIndex]}`} alt="Selected Product" />}
           </div>
         </div>
         <div className="prdDets">

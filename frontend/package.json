@@ -1,5 +1,4 @@
 {
-  "proxy": "https://didwaniacreations.in:5000",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,

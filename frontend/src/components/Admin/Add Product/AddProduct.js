@@ -48,7 +48,7 @@ function AddProduct() {
     console.log(formData)
   
     // Send the FormData directly
-    const response = await fetch(`https://didwaniacreations.in:5000/products/addproduct`, {
+    const response = await fetch(`http://localhost:5000/products/addproduct`, {
       method: 'POST',
       body: formData,
     });

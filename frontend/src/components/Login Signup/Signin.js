@@ -11,10 +11,62 @@ import useLogin from "../../hooks/useLogin";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useNotify from "../../hooks/useNotify";
-// import "../Admin"
 
 function Signin() {
 
+ 
+
+const sendSms = async () => {
+    try {
+      const formData = {
+        to: '+919326388824',  // Recipient's phone number
+            message: 'Welcome to Didwania!', // Message text
+      }
+        const response = await fetch('http://localhost:5000/send-sms', {
+            method: "POST",
+            body: JSON.stringify(formData),
+            headers: {
+              'Content-Type': "application/json"
+            }
+        });
+        console.log('SMS sent successfully:', response.data);
+    } catch (error) {
+        console.error('Error sending SMS:', error);
+    }
+};
+
+const [emailData, setEmailData] = useState({
+  to: 'garateomkar05@gmail.com',
+  subject: 'Thank you for login.',
+  text: 'Thank you for choosing Didwania!',
+});
+
+// const handleChange = (e) => {
+//   const { name, value } = e.target;
+//   setEmailData((prev) => ({ ...prev, [name]: value }));
+// };
+
+const sendEmail = async () => {
+  try {
+      const response = await fetch('http://localhost:5000/send-email', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(emailData),
+      });
+
+      const result = await response.json();
+      // if (result.success) {
+      //     alert('Email sent successfully!');
+      // } else {
+      //     alert('Failed to send email: ' + result.error);
+      // }
+  } catch (error) {
+      console.error('Error:', error);
+      // alert('An error occurred: ' + error.message);
+  }
+};
 
 
   const {notify} = useNotify();
@@ -49,8 +101,8 @@ function Signin() {
       {
         console.log("Successfully logged in")
         notify("Successfully logged in", "success")
-        // sendSms();
-        // sendEmail();
+        sendSms();
+        sendEmail();
         setTimeout(() => navigate('/'), 1000); 
       }
   },[error])
@@ -167,10 +219,6 @@ function Signin() {
           </form>
         </div>
       </div>
-
-
-
-      
       <ToastContainer/>
     </>
   );

@@ -36,7 +36,7 @@ function NavbarAdmin() {
 
   useEffect(() => {
     const fetchProducts = async ()=>{
-    const response = await fetch("https://didwaniacreations.in:5000/products/getallproducts")
+    const response = await fetch("http://localhost:5000/products/getallproducts")
         const json = await response.json()
 
         if(response.ok){
