@@ -9,16 +9,12 @@ const billRoutes = require('./routes/billingRoutes')
 const Razorpay = require('razorpay')
 const crypto = require('crypto')
 
-const https = require("https");
-const fs = require("fs");
+
 
 
 const app = express();
 
-const options = {
-  key: fs.readFileSync("/etc/letsencrypt/live/didwaniacreations.in/privkey.pem"),
-  cert: fs.readFileSync("/etc/letsencrypt/live/didwaniacreations.in/fullchain.pem"),
-};
+
 
 // app.use(cors({
 //   origin: ["https://www.didwaniacreations.in"],
@@ -96,12 +92,10 @@ app.get('/', (req, res) => {
   res.send('Hello from the backend!');
 });
 
-https.createServer(options, app).listen(5000, () => {
-  console.log("🚀 Secure server running at https://didwaniacreations.in:5000");
+
+
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server is running on http://0.0.0.0:${PORT}`);
 });
-
-
-// app.listen(PORT, "0.0.0.0", () => {
-//   console.log(`Server is running on http://0.0.0.0:${PORT}`);
-// });
 
