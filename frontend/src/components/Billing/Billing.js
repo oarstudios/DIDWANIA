@@ -153,7 +153,7 @@ function Billing() {
 
   const fetchData = async () => {
     if (user) {
-      const response = await fetch(`https://didwaniacreations.in/users/getuserbyid/${user.user?._id}`, {
+      const response = await fetch(`http://147.93.103.125:5000/users/getuserbyid/${user.user?._id}`, {
         headers: {
           'Authorization': `Bearer ${user.token}`,
         },
@@ -177,7 +177,7 @@ useEffect(() => {
     try {
       
       const productPromises = adtItems.map(item => 
-        fetch(`https://didwaniacreations.in/products/getproductbyid/${item.product}`, {
+        fetch(`http://147.93.103.125:5000/products/getproductbyid/${item.product}`, {
           headers: {
             'Authorization': `Bearer ${user.token}`,
           }
@@ -276,7 +276,7 @@ useEffect(() => {
     const amount= totalAmount * 100;
     const currency= "INR";
     const receipt = "abcdef"
-    const response = await fetch('https://didwaniacreations.in/order',{
+    const response = await fetch('http://147.93.103.125:5000/order',{
       method: "POST",
       body: JSON.stringify({
         amount,
@@ -304,7 +304,7 @@ useEffect(() => {
           ...response, 
         }
 
-        const validateRes = await fetch('https://didwaniacreations.in/order/validate',{
+        const validateRes = await fetch('http://147.93.103.125:5000/order/validate',{
           method: "POST",
           body: JSON.stringify(body),
           headers: {
@@ -321,7 +321,7 @@ useEffect(() => {
         if(validateRes.ok)
         {
           try{
-            const response = await fetch(`https://didwaniacreations.in/bills/billforcart/${user.user?._id}`, {
+            const response = await fetch(`http://147.93.103.125:5000/bills/billforcart/${user.user?._id}`, {
               method: "POST",
               body: JSON.stringify(data),
               headers: {
@@ -414,7 +414,7 @@ useEffect(() => {
       
   //     // if(pay)
   //     // {
-  //       const response = await fetch(`https://didwaniacreations.in/bills/billforcart/${user.user?._id}`, {
+  //       const response = await fetch(`http://147.93.103.125:5000/bills/billforcart/${user.user?._id}`, {
   //         method: "POST",
   //         body: JSON.stringify(data),
   //         headers: {
@@ -586,7 +586,7 @@ useEffect(() => {
                 <div key={item._id} className="cItem1 cItem11">
                   <div className="cItem cItemm">
                     <div className="cItemImg cItemImgg">
-                      <img src={`https://didwaniacreations.in/uploads/${item.productDetails?.product?.productImages[0]}`} alt={item.productDetails?.product?.title} />
+                      <img src={`http://147.93.103.125:5000/uploads/${item.productDetails?.product?.productImages[0]}`} alt={item.productDetails?.product?.title} />
                     </div>
                     <div className="cItemDetails cItemDetailss">
                       <h2>{item.productDetails?.product?.title}</h2>

@@ -43,7 +43,7 @@ function CustomizedGiftAllProduct() {
   const [products, setProducts] = useState([]);
 
   const fetchData = async () => {
-    const response = await fetch('https://didwaniacreations.in/products/getallproducts');
+    const response = await fetch('http://147.93.103.125:5000/products/getallproducts');
     const json = await response.json();
     if (response.ok) {
       const daProducts = json.products.filter((prd)=> prd.category === "Daily Accessories")
@@ -62,7 +62,7 @@ function CustomizedGiftAllProduct() {
 
   const updateUserCart = async () => {
     try {
-      const response = await fetch(`https://didwaniacreations.in/users/getuserbyid/${user.user?._id}`, {
+      const response = await fetch(`http://147.93.103.125:5000/users/getuserbyid/${user.user?._id}`, {
         method: "GET",
         headers: {
           'Authorization': `Bearer ${user.token}`
@@ -95,7 +95,7 @@ function CustomizedGiftAllProduct() {
       }
       console.log(formData)
       
-      const response = await fetch(`https://didwaniacreations.in/users/addtocart/${user.user?._id}`, {
+      const response = await fetch(`http://147.93.103.125:5000/users/addtocart/${user.user?._id}`, {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
@@ -151,7 +151,7 @@ function CustomizedGiftAllProduct() {
             <div className="product-item" key={product._id}>
               <Link to={`/product/${product._id}`}>
                 <img
-                  src={`https://didwaniacreations.in/uploads/${product.productImages[0]}`}
+                  src={`http://147.93.103.125:5000/uploads/${product.productImages[0]}`}
                   alt={product.title}
                   className="hoverable"
                 />
