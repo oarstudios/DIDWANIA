@@ -46,7 +46,7 @@ function ReligiousAll() {
   const [products, setProducts] = useState([]);
 
   const fetchData = async () => {
-    const response = await fetch('https://147.93.103.125/products/getallproducts');
+    const response = await fetch('https://backend.didwaniacreations.in/products/getallproducts');
     const json = await response.json();
     if (response.ok) {
       const daProducts = json.products.filter((prd)=> prd.category === "Religious Accessories")
@@ -65,7 +65,7 @@ function ReligiousAll() {
 
   const updateUserCart = async () => {
     try {
-      const response = await fetch(`https://147.93.103.125/users/getuserbyid/${user.user?._id}`, {
+      const response = await fetch(`https://backend.didwaniacreations.in/users/getuserbyid/${user.user?._id}`, {
         method: "GET",
         headers: {
           'Authorization': `Bearer ${user.token}`
@@ -98,7 +98,7 @@ function ReligiousAll() {
       }
       console.log(formData)
       
-      const response = await fetch(`https://147.93.103.125/users/addtocart/${user.user?._id}`, {
+      const response = await fetch(`https://backend.didwaniacreations.in/users/addtocart/${user.user?._id}`, {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
@@ -149,7 +149,7 @@ function ReligiousAll() {
             <div className="product-item" key={product._id}>
               <Link to={`/product/${product._id}`}>
                 <img
-                  src={`https://147.93.103.125/uploads/${product.productImages[0]}`}
+                  src={`https://backend.didwaniacreations.in/uploads/${product.productImages[0]}`}
                   alt={product.title}
                   className="hoverable"
                 />

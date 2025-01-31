@@ -146,7 +146,7 @@ function BillingForOne() {
 
 //   const fetchData = async () => {
 //     if (user) {
-//       const response = await fetch(`https://147.93.103.125/users/getuserbyid/${user.user?._id}`, {
+//       const response = await fetch(`https://backend.didwaniacreations.in/users/getuserbyid/${user.user?._id}`, {
 //         headers: {
 //           'Authorization': `Bearer ${user.token}`,
 //         },
@@ -169,7 +169,7 @@ useEffect(() => {
   const fetchData = async () => {
     try {
       
-      const response = await fetch(`https://147.93.103.125/products/getproductbyid/${id}`)
+      const response = await fetch(`https://backend.didwaniacreations.in/products/getproductbyid/${id}`)
       const json = await response.json();
       if(response.ok)
       {
@@ -232,7 +232,7 @@ if(user)
       };
       console.log("data", data);
   
-      const response = await fetch(`https://147.93.103.125/bills/billforone/${user.user?._id}/${id}`, {
+      const response = await fetch(`https://backend.didwaniacreations.in/bills/billforone/${user.user?._id}/${id}`, {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
@@ -260,7 +260,7 @@ if(user)
     const amount= totalAmount * 100;
     const currency= "INR";
     const receipt = "abcdef"
-    const response = await fetch('https://147.93.103.125/order',{
+    const response = await fetch('https://backend.didwaniacreations.in/order',{
       method: "POST",
       body: JSON.stringify({
         amount,
@@ -288,7 +288,7 @@ if(user)
           ...response, 
         }
 
-        const validateRes = await fetch('https://147.93.103.125/order/validate',{
+        const validateRes = await fetch('https://backend.didwaniacreations.in/order/validate',{
           method: "POST",
           body: JSON.stringify(body),
           headers: {
@@ -463,7 +463,7 @@ if(user)
                 <div key={cartItems._id} className="cItem1 cItem11">
                   <div className="cItem cItemm">
                     <div className="cItemImg cItemImgg">
-                      <img src={`https://147.93.103.125/uploads/${cartItems.product?.productImages[0]}`} alt={cartItems.product?.title} />
+                      <img src={`https://backend.didwaniacreations.in/uploads/${cartItems.product?.productImages[0]}`} alt={cartItems.product?.title} />
                     </div>
                     <div className="cItemDetails cItemDetailss">
                       <h2>{cartItems.product?.title}</h2>

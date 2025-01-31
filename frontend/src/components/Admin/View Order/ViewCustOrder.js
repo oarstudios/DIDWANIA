@@ -32,7 +32,7 @@ function ViewCustOrder() {
   useEffect(() => {
     const fetchOrderData = async () => {
       try {
-        const response = await fetch(`https://147.93.103.125/bills/getbillbyid/${id}`, {
+        const response = await fetch(`https://backend.didwaniacreations.in/bills/getbillbyid/${id}`, {
           headers: {
             'Authorization': `Bearer ${user.token}`
           }
@@ -77,7 +77,7 @@ function ViewCustOrder() {
       try {
         // Fetch product details based on the product IDs in orderItems
         const productPromises = orderItems.map(orderItem =>
-          fetch(`https://147.93.103.125/products/getproductbyid/${orderItem.product}`, {
+          fetch(`https://backend.didwaniacreations.in/products/getproductbyid/${orderItem.product}`, {
             headers: {
               'Authorization': `Bearer ${user.token}`,
             }
@@ -132,7 +132,7 @@ console.log(status)
       const formData = {
         status
       }
-      const response = await fetch(`https://147.93.103.125/bills/editbill/${id}`,{
+      const response = await fetch(`https://backend.didwaniacreations.in/bills/editbill/${id}`,{
         method: "PUT",
         body: JSON.stringify(formData),
         headers:{
@@ -282,7 +282,7 @@ console.log(status)
             {cartItems.map((item) => (
                 <div key={item._id} className="cItem1">
                   <div className="cItemImg">
-                    <img src={`https://147.93.103.125/uploads/${item.productDetails?.product?.productImages[0]}` || backprint_t} alt={item.name} />
+                    <img src={`https://backend.didwaniacreations.in/uploads/${item.productDetails?.product?.productImages[0]}` || backprint_t} alt={item.name} />
                   </div>
                   <div className="cItemDetails">
                     <h2>{item.productDetails?.product?.name}</h2>
