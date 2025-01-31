@@ -14,7 +14,8 @@ function OrderLeft() {
     
     useEffect(()=>{
         const fetchData = async()=>{
-          const response = await fetch(`http://147.93.103.125:5000/users/getuserbyid/${user.user?._id}`)
+          const response = await fetch(`https://147.93.103.125
+/users/getuserbyid/${user.user?._id}`)
           const json = await response.json()
           if(response.ok)
           {

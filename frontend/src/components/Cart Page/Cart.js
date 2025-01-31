@@ -25,7 +25,8 @@ function Cart() {
 
   const fetchData = async () => {
     if (user) {
-      const response = await fetch(`http://147.93.103.125:5000/users/getuserbyid/${user.user?._id}`, {
+      const response = await fetch(`https://147.93.103.125
+/users/getuserbyid/${user.user?._id}`, {
         headers: {
           'Authorization': `Bearer ${user.token}`,
         },
@@ -48,7 +49,8 @@ useEffect(() => {
   const fetchData = async () => {
     try {
       const productPromises = adtItems.map(item => 
-        fetch(`http://147.93.103.125:5000/products/getproductbyid/${item.product}`, {
+        fetch(`https://147.93.103.125
+/products/getproductbyid/${item.product}`, {
           headers: {
             'Authorization': `Bearer ${user.token}`,
           }
@@ -94,7 +96,8 @@ useEffect(() => {
         }
         console.log(formData)
         
-        const response = await fetch(`http://147.93.103.125:5000/users/removefromcart/${user.user?._id}`, {
+        const response = await fetch(`https://147.93.103.125
+/users/removefromcart/${user.user?._id}`, {
           method: "DELETE",
           body: JSON.stringify(formData),
           headers: {
@@ -146,7 +149,8 @@ useEffect(() => {
                     <div className="cItem">
                       <div className="cItemImg">
                         {" "}
-                        <img src={`http://147.93.103.125:5000/uploads/${item.productDetails?.product?.productImages[0]}`} alt={item.title} />{" "}
+                        <img src={`https://147.93.103.125
+/uploads/${item.productDetails?.product?.productImages[0]}`} alt={item.title} />{" "}
                       </div>
                       <div className="cItemDetails">
                         <h2>{item.productDetails?.product?.title}</h2>

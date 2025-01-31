@@ -28,15 +28,18 @@ function EditProduct() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`http://147.93.103.125:5000/products/getproductbyid/${id}`);
+      const response = await fetch(`https://147.93.103.125
+/products/getproductbyid/${id}`);
       const json = await response.json();
       if (response.ok) {
         console.log(json.product);
         setProductName(json.product.title);
         setPrice(json.product.price);
         setDescription(json.product.description);
-        setImage1Preview(`http://147.93.103.125:5000/uploads/${json.product?.productImages[0]}`);
-        setImage2Preview(`http://147.93.103.125:5000/uploads/${json.product?.productImages[1]}`);
+        setImage1Preview(`https://147.93.103.125
+/uploads/${json.product?.productImages[0]}`);
+        setImage2Preview(`https://147.93.103.125
+/uploads/${json.product?.productImages[1]}`);
         setStock(json.product.itemInStock);
         setCategory(json.product.category);
       }
@@ -70,7 +73,8 @@ function EditProduct() {
 
     console.log(formData)
   
-    const response = await fetch(`http://147.93.103.125:5000/products/updateproduct/${id}`, {
+    const response = await fetch(`https://147.93.103.125
+/products/updateproduct/${id}`, {
       method: 'PUT',
       body: formData,
     });
@@ -92,7 +96,8 @@ function EditProduct() {
     const confirmDelete = window.confirm("Are you sure you want to delete this product permanently?");
     if (!confirmDelete) return; // If the user cancels, exit the function
   
-    const response = await fetch(`http://147.93.103.125:5000/products/deleteproduct/${id}`, {
+    const response = await fetch(`https://147.93.103.125
+/products/deleteproduct/${id}`, {
       method: 'DELETE'
     });
   
