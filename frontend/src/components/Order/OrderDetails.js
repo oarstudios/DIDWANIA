@@ -28,8 +28,7 @@ function OrderDetails() {
   useEffect(() => {
     const fetchOrderData = async () => {
       try {
-        const response = await fetch(`https://147.93.103.125
-/bills/getbillbyid/${id}`, {
+        const response = await fetch(`https://147.93.103.125/bills/getbillbyid/${id}`, {
           headers: {
             'Authorization': `Bearer ${user.token}`
           }
@@ -72,8 +71,7 @@ function OrderDetails() {
       try {
         // Fetch product details based on the product IDs in orderItems
         const productPromises = orderItems.map(orderItem =>
-          fetch(`https://147.93.103.125
-/products/getproductbyid/${orderItem.product}`, {
+          fetch(`https://147.93.103.125/products/getproductbyid/${orderItem.product}`, {
             headers: {
               'Authorization': `Bearer ${user.token}`,
             }
@@ -239,8 +237,7 @@ function OrderDetails() {
                 console.log(item),
                 <div key={index} className="cItem1">
                   <div className="cItemImg">
-                    <img src={`https://147.93.103.125
-/uploads/${item?.productDetails?.product?.productImages[0]}` || backprint_t} alt={item.productDetails?.product?.name} />
+                    <img src={`https://147.93.103.125/uploads/${item?.productDetails?.product?.productImages[0]}` || backprint_t} alt={item.productDetails?.product?.name} />
                   </div>
                   <div className="cItemDetails">
                     <h2>{item.productDetails?.product?.name}</h2>

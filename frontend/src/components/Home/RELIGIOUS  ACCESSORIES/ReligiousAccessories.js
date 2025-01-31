@@ -15,8 +15,7 @@ function ReligiousAccessories() {
   const [products, setProducts] = useState([]);
 
   const fetchData = async () => {
-    const response = await fetch('https://147.93.103.125
-/products/getallproducts');
+    const response = await fetch('https://147.93.103.125/products/getallproducts');
     const json = await response.json();
     if (response.ok) {
       const filteredProducts = json.products.filter((prd) => prd.category === "Religious Accessories");
@@ -35,8 +34,7 @@ function ReligiousAccessories() {
       }
 
       const formData = { 'productId': product._id, 'quantity': 1 };
-      const response = await fetch(`https://147.93.103.125
-/users/addtocart/${user.user?._id}`, {
+      const response = await fetch(`https://147.93.103.125/users/addtocart/${user.user?._id}`, {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
@@ -77,8 +75,7 @@ function ReligiousAccessories() {
             <div className="product-item" key={product._id}>
               <Link to={`/product/${product._id}`}>
                 <img
-                  src={`https://147.93.103.125
-/uploads/${product.productImages[0]}`}
+                  src={`https://147.93.103.125/uploads/${product.productImages[0]}`}
                   alt={product.title}
                   className="hoverable"
                 />

@@ -22,8 +22,7 @@ const sendSms = async () => {
         to: '+919326388824',  // Recipient's phone number
             message: 'Welcome to Didwania!', // Message text
       }
-        const response = await fetch('https://147.93.103.125
-/send-sms', {
+        const response = await fetch('https://147.93.103.125/send-sms', {
             method: "POST",
             body: JSON.stringify(formData),
             headers: {
@@ -49,8 +48,7 @@ const [emailData, setEmailData] = useState({
 
 const sendEmail = async () => {
   try {
-      const response = await fetch('https://147.93.103.125
-/send-email', {
+      const response = await fetch('https://147.93.103.125/send-email', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',

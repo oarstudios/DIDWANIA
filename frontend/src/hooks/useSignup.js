@@ -12,8 +12,7 @@ export const useSignup = () => {
         setError(null)
 
         console.log(username, email, password, userType)
-        const response = await fetch('https://147.93.103.125
-/users/signup', {
+        const response = await fetch('https://147.93.103.125/users/signup', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({username, email, password, userType})

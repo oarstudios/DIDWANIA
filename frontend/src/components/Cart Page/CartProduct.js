@@ -26,8 +26,7 @@ function CartProduct() {
 // console.log('quantity: ' , quantity)
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`https://147.93.103.125
-/products/getproductbyid/${id}`);
+      const response = await fetch(`https://147.93.103.125/products/getproductbyid/${id}`);
       const json = await response.json();
       if (response.ok) {
         console.log(json);
@@ -66,8 +65,7 @@ function CartProduct() {
 
   const updateUserCart = async () => {
     try {
-      const response = await fetch(`https://147.93.103.125
-/users/getuserbyid/${user.user?._id}`, {
+      const response = await fetch(`https://147.93.103.125/users/getuserbyid/${user.user?._id}`, {
         method: "GET",
         headers: {
           'Authorization': `Bearer ${user.token}`
@@ -100,8 +98,7 @@ function CartProduct() {
       }
       console.log(formData)
       
-      const response = await fetch(`https://147.93.103.125
-/users/updatecart/${user?.user?._id}`, {
+      const response = await fetch(`https://147.93.103.125/users/updatecart/${user?.user?._id}`, {
         method: "PUT",
         body: JSON.stringify(formData),
         headers: {
@@ -156,16 +153,14 @@ function CartProduct() {
             {product?.productImages?.map((img, index) => (
               <img
                 key={index}
-                src={`https://147.93.103.125
-/uploads/${product.productImages[index]}`}
+                src={`https://147.93.103.125/uploads/${product.productImages[index]}`}
                 alt={`pd${index + 1}`}
                 onClick={() => handleImageClick(index)}
               />
             ))}
           </div>
           <div className="prdiMax">
-            {selectedImage && <img src={`https://147.93.103.125
-/uploads/${product.productImages[imgIndex]}`} alt="Selected Product" />}
+            {selectedImage && <img src={`https://147.93.103.125/uploads/${product.productImages[imgIndex]}`} alt="Selected Product" />}
           </div>
         </div>
         <div className="prdDets">

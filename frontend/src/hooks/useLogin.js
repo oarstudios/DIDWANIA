@@ -11,8 +11,7 @@ export const useLogin = () => {
         setIsLoading(true)
         setError(null)
 
-        const response = await fetch('https://147.93.103.125
-/users/login', {
+        const response = await fetch('https://147.93.103.125/users/login', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email, password})

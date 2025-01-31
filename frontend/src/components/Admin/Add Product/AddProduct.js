@@ -48,8 +48,7 @@ function AddProduct() {
     console.log(formData)
   
     // Send the FormData directly
-    const response = await fetch(`https://147.93.103.125
-/products/addproduct`, {
+    const response = await fetch(`https://147.93.103.125/products/addproduct`, {
       method: 'POST',
       body: formData,
     });
