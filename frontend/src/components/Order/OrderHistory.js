@@ -13,7 +13,7 @@ function OrderHistory() {
     const fetchData = async () => {
       try {
         console.log('Fetching orders...');
-        const response = await fetch('http://localhost:5000/bills/getbills', {
+        const response = await fetch('http://147.93.103.125:5000/bills/getbills', {
           headers: {
             'Authorization': `Bearer ${user.token}`
           }
