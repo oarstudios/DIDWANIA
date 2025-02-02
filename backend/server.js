@@ -15,10 +15,11 @@ const crypto = require('crypto')
 const app = express();
 
 app.use(cors({
-  origin: ["https://www.didwaniacreations.in"],
+  origin: ["https://www.didwaniacreations.in", "https://didwaniacreations.in"], // Allow both versions
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true
 }));
+
 
 const PORT = process.env.PORT || 5000;
 
